@@ -1,13 +1,82 @@
-body {
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+section h2 {
+  margin-bottom: 1em;
+  font-size: 2em;
+  text-align: center;
+  color: rgb(161, 97, 8);
+}
+
+section .inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.inputs input,
+button {
+  padding: 0.35em 0.375em;
+  font-size: 1.5em;
+  outline: none;
+  color: rgb(225, 139, 20);
+  border: 2px solid rgb(232, 190, 132);
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(245, 185, 101);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(245, 185, 101);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(245, 185, 101);
+}
+
+button {
+  color: #fff;
+  font-weight: 600;
+  margin-top: 1em;
+  display: flex;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  width: max-content;
+  background-color: rgba(225, 139, 20, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover {
+  color: rgb(161, 97, 8);
 }
