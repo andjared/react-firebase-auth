@@ -13,6 +13,7 @@ import { useEffect } from "react";
 function App() {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
+  const [error, setError] = useState("");
   const [user, setUser] = useState({});
 
   useEffect(() => {
@@ -33,6 +34,7 @@ function App() {
       console.log(user);
     } catch (error) {
       console.log(error.message);
+      setError(error.message);
     }
   };
 
@@ -52,6 +54,7 @@ function App() {
       console.log(user);
     } catch (error) {
       console.log(error.message);
+      setError(error.message);
     }
   };
 
@@ -74,6 +77,7 @@ function App() {
           </div>
         </>
       )}
+      {error && <p className="error">{error}</p>}
     </main>
   );
 }

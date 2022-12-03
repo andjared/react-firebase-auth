@@ -44,6 +44,10 @@ h4 {
   color: rgb(161, 97, 8);
 }
 
+.error {
+  color: red;
+}
+
 section .inputs {
   display: flex;
   flex-direction: column;
