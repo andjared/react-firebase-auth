@@ -75,9 +75,9 @@ function App() {
             <p>Already have an Acount?</p>
             <Button text="Log In" handleClick={handleLogin} />
           </div>
+          {error && <p className="error">{error}</p>}
         </>
       )}
-      {error && <p className="error">{error}</p>}
     </main>
   );
 }
