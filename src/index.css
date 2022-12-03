@@ -32,7 +32,8 @@ section,
   padding: 2em;
 }
 
-h2 {
+h2,
+h4 {
   margin-bottom: 1em;
   font-size: 2em;
   text-align: center;
